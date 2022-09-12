@@ -1,9 +1,6 @@
-import datetime , random
 
 def Writeinfile( msg , filenema ):
     w = open(filenema , "a")
-    msg.append(str(random.randint(0, 1000)))
-    msg.append(str(datetime.datetime.now()))
     w.write(msg)
     w.close()
 
@@ -14,6 +11,13 @@ def Readazfile(filenema):
     for x in o :
         db.append(x.replace("\n",",",1000))
     return db
+
+def Id_searchre(id , filenema):
+    o = open(filenema,"r")
+    for x in id :
+        for z in o:
+            if x[0] == z[0]:
+               return x[0] 
 
 # def Updateinfile( msg , filenema ):
 #     o = open(filenema,"r")
@@ -34,3 +38,8 @@ def Readazfile(filenema):
 #             x.clear()
 #     o.close()
     
+def id_define( ):
+    return str(random.randint(0, 1000))
+
+def date_now( ) :
+    return str(datetime.datetime.now())
