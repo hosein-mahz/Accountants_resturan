@@ -2,7 +2,7 @@ import db_lib
 import log_lib
 
 
-user_db_address = "db/user_admin"
+user_db_address = "db/user_admin.txt"
 
 def user_write(lname , fname , email , password):
     msg = []
@@ -11,8 +11,8 @@ def user_write(lname , fname , email , password):
     msg.append(fname)
     msg.append(email)
     msg.append(str(password))
-    msg.append(db_lib.Date_now)
-    deta =",".join(msg)
+    msg.append(db_lib.Date_now())
+    deta = ",".join(msg)
     deta = deta +"\n"
     
     log_lib.Log("The user is complete")
