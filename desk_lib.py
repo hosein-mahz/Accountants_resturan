@@ -1,12 +1,12 @@
 import db_lib
 import log_lib
-import random , datetime
+
 
 desk_db_addresss = "db/nema_desk.txt"
 
 def desk_write( nema ):
     msg = []
-    msg.append(id_define())
+    msg.append(db_lib.Id_define())
     msg.append(str(nema))
     deta =",".join(msg)
     deta = deta + "\n"
@@ -15,5 +15,4 @@ def desk_write( nema ):
     
     db_lib.Writeinfile(deta,desk_db_addresss)
 
-def id_define( ):
-    return str(random.randint(0,100))
+

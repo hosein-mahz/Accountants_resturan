@@ -1,3 +1,4 @@
+import random , datetime
 
 def Writeinfile( msg , filenema ):
     w = open(filenema , "a")
@@ -38,8 +39,8 @@ def Id_searchre(id , filenema):
 #             x.clear()
 #     o.close()
     
-def id_define( ):
+def Id_define( ):
     return str(random.randint(0, 1000))
 
-def date_now( ) :
+def Date_now( ) :
     return str(datetime.datetime.now())
